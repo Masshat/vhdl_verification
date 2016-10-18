@@ -1,4 +1,3 @@
-OSVVM := ../../../../Documents/osvvm/OSVVM/
 
 .PHONY: sim compile clean wave
 
@@ -16,17 +15,17 @@ work/osvvm_fsm_coverage.ghw: work/osvvm_fsm_coverage.o log
 
 work/osvvm/%.o: work/osvvm
 	@echo "Analyse OSVVM library ..."
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/NamePkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/TranscriptPkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/OsvvmGlobalPkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/TextUtilPkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/AlertLogPkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/RandomBasePkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/SortListPkg_int.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/RandomPkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/MessagePkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/CoveragePkg.vhd
-	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm ../$(OSVVM)/MemoryPkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/NamePkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/TranscriptPkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/OsvvmGlobalPkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/TextUtilPkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/AlertLogPkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/RandomBasePkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/SortListPkg_int.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/RandomPkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/MessagePkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/CoveragePkg.vhd
+	@cd work; $(GHDL) -a --std=08 --work=osvvm --workdir=osvvm $(OSVVM_DIR)/MemoryPkg.vhd
 
 
 compile \
